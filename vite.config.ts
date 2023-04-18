@@ -4,11 +4,12 @@ import { crx } from '@crxjs/vite-plugin'
 import tsconfigPaths from 'vite-tsconfig-paths'
 // @ts-ignore
 import manifest from './manifest.json'
+import buildNotifier from './.vite/plugins/rollup-plugin-notifier'
 // https://vitejs.dev/config/
 export default ({ mode }) => {
   const plugins: any[] = [tsconfigPaths(), react(), crx({ manifest })]
   if(mode === 'development'){
-    // plugins.push()
+    plugins.push(buildNotifier())
   }
   return defineConfig({
     plugins: plugins,
