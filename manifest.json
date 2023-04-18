@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "zh",
+  "version": "0.0.1",
+  "icons": {
+    "16": "src/assets/icon.png",
+    "32": "src/assets/icon.png",
+    "48": "src/assets/icon.png",
+    "128": "src/assets/icon.png"
+  },
+  "action": {},
+  "permissions": ["commands", "storage", "unlimitedStorage","tabs"],
+  "commands": {
+    "open-app": {
+      "suggested_key": {
+        "default": "Alt+M",
+        "windows": "Alt+M",
+        "linux": "Alt+M",
+        "mac": "Command+M"
+      },
+      "description": "Open ChatHub app"
+    }
+  },
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  }
+}
