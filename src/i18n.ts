@@ -6,11 +6,17 @@ const resources = {
   en: {
     translation: {
       Save: 'Save',
+      Chat: 'Chat',
+      Image: 'Image',
+      Settings: 'Settings',
     },
   },
   zh: {
     translation: {
       Save: '保存',
+      Chat: '聊天',
+      Image: '图片',
+      Settings: '设置',
     },
   },
 }
