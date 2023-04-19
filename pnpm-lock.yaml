@@ -7,9 +7,12 @@ specifiers:
   '@types/react-dom': ^18.0.11
   '@types/webextension-polyfill': ^0.10.0
   '@vitejs/plugin-react': ^3.1.0
+  i18next: ^22.4.14
+  i18next-browser-languagedetector: ^7.0.1
   lodash-es: ^4.17.21
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-i18next: ^12.2.0
   typescript: ^4.9.3
   vite: ^4.2.0
   vite-tsconfig-paths: ^4.2.0
@@ -17,9 +20,12 @@ specifiers:
   ws: ^8.13.0
 
 dependencies:
+  i18next: registry.npmmirror.com/i18next/22.4.14
+  i18next-browser-languagedetector: registry.npmmirror.com/i18next-browser-languagedetector/7.0.1
   lodash-es: registry.npmmirror.com/lodash-es/4.17.21
   react: registry.npmmirror.com/react/18.2.0
   react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+  react-i18next: registry.npmmirror.com/react-i18next/12.2.0_57ubdvajp6562okxygabugvlve
   webextension-polyfill: registry.npmmirror.com/webextension-polyfill/0.10.0
 
 devDependencies:
@@ -274,6 +280,15 @@ packages:
       '@babel/core': registry.npmmirror.com/@babel/core/7.21.4
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils/7.20.2
     dev: true
+
+  registry.npmmirror.com/@babel/runtime/7.21.0:
+    resolution: {integrity: sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/runtime/-/runtime-7.21.0.tgz}
+    name: '@babel/runtime'
+    version: 7.21.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.11
+    dev: false
 
   registry.npmmirror.com/@babel/template/7.20.7:
     resolution: {integrity: sha512-8SegXApWe6VoNw0r9JHpSteLKTpTiLZ4rMlGIm9JQ18KiCtyQiAMEazujAHrUS5flrcqYZa75ukev3P6QmUwUw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/template/-/template-7.20.7.tgz}
@@ -1130,6 +1145,14 @@ packages:
       function-bind: registry.npmmirror.com/function-bind/1.1.1
     dev: true
 
+  registry.npmmirror.com/html-parse-stringify/3.0.1:
+    resolution: {integrity: sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/html-parse-stringify/-/html-parse-stringify-3.0.1.tgz}
+    name: html-parse-stringify
+    version: 3.0.1
+    dependencies:
+      void-elements: registry.npmmirror.com/void-elements/3.1.0
+    dev: false
+
   registry.npmmirror.com/htmlparser2/8.0.2:
     resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/htmlparser2/-/htmlparser2-8.0.2.tgz}
     name: htmlparser2
@@ -1140,6 +1163,22 @@ packages:
       domutils: registry.npmmirror.com/domutils/3.0.1
       entities: registry.npmmirror.com/entities/4.5.0
     dev: true
+
+  registry.npmmirror.com/i18next-browser-languagedetector/7.0.1:
+    resolution: {integrity: sha512-Pa5kFwaczXJAeHE56CHG2aWzFBMJNUNghf0Pm4SwSrEMps/PTKqW90EYWlIvhuYStf3Sn1K0vw+gH3+TLdkH1g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/i18next-browser-languagedetector/-/i18next-browser-languagedetector-7.0.1.tgz}
+    name: i18next-browser-languagedetector
+    version: 7.0.1
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.21.0
+    dev: false
+
+  registry.npmmirror.com/i18next/22.4.14:
+    resolution: {integrity: sha512-VtLPtbdwGn0+DAeE00YkiKKXadkwg+rBUV+0v8v0ikEjwdiJ0gmYChVE4GIa9HXymY6wKapkL93vGT7xpq6aTw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/i18next/-/i18next-22.4.14.tgz}
+    name: i18next
+    version: 22.4.14
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.21.0
+    dev: false
 
   registry.npmmirror.com/is-core-module/2.12.0:
     resolution: {integrity: sha512-RECHCBCd/viahWmwj6enj19sKbHfJrddi/6cBDsNTKbNq0f7VeaUkBo60BqzvPqo/W54ChS62Z5qyun7cfOMqQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/is-core-module/-/is-core-module-2.12.0.tgz}
@@ -1376,6 +1415,29 @@ packages:
       scheduler: registry.npmmirror.com/scheduler/0.23.0
     dev: false
 
+  registry.npmmirror.com/react-i18next/12.2.0_57ubdvajp6562okxygabugvlve:
+    resolution: {integrity: sha512-5XeVgSygaGfyFmDd2WcXvINRw2WEC1XviW1LXY/xLOEMzsCFRwKqfnHN+hUjla8ZipbVJR27GCMSuTr0BhBBBQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-i18next/-/react-i18next-12.2.0.tgz}
+    id: registry.npmmirror.com/react-i18next/12.2.0
+    name: react-i18next
+    version: 12.2.0
+    peerDependencies:
+      i18next: '>= 19.0.0'
+      react: '>= 16.8.0'
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.21.0
+      html-parse-stringify: registry.npmmirror.com/html-parse-stringify/3.0.1
+      i18next: registry.npmmirror.com/i18next/22.4.14
+      react: registry.npmmirror.com/react/18.2.0
+      react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+    dev: false
+
   registry.npmmirror.com/react-refresh/0.13.0:
     resolution: {integrity: sha512-XP8A9BT0CpRBD+NYLLeIhld/RqG9+gktUjW1FkE+Vm7OCinbG1SshcK5tb9ls4kzvjZr9mOQc7HYgBngEyPAXg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-refresh/-/react-refresh-0.13.0.tgz}
     name: react-refresh
@@ -1397,6 +1459,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: registry.npmmirror.com/loose-envify/1.4.0
+    dev: false
+
+  registry.npmmirror.com/regenerator-runtime/0.13.11:
+    resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz}
+    name: regenerator-runtime
+    version: 0.13.11
     dev: false
 
   registry.npmmirror.com/resolve/1.22.2:
@@ -1632,6 +1700,13 @@ packages:
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
+
+  registry.npmmirror.com/void-elements/3.1.0:
+    resolution: {integrity: sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/void-elements/-/void-elements-3.1.0.tgz}
+    name: void-elements
+    version: 3.1.0
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   registry.npmmirror.com/webextension-polyfill/0.10.0:
     resolution: {integrity: sha512-c5s35LgVa5tFaHhrZDnr3FpQpjj1BB+RXhLTYUxGqBVN460HkbM8TBtEqdXWbpTKfzwCcjAZVF7zXCYSKtcp9g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/webextension-polyfill/-/webextension-polyfill-0.10.0.tgz}
