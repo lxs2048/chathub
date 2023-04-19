@@ -2,10 +2,14 @@ import { useTranslation } from 'react-i18next'
 import './demo.scss'
 function Demo() {
   const { t } = useTranslation()
-  return (
+  return (<>
     <div className='demo' style={{background: 'rgb(var(--color-primary-blue))'}}>
       {t('Save')}
     </div>
+    <div className='bg-primary-blue text-light-text'>
+      {t('Save')}
+    </div>
+  </>
   )
 }
 

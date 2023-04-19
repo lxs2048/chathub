@@ -13,6 +13,12 @@
 @include inter-ui.weight-700-normal;
 @include inter-ui-variable.normal;
 
+// https://www.tailwindcss.cn/docs/installation#tailwind-css
+/* ./your-css-folder/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html { font-family: "Inter", "system-ui"; }
 
 @supports (font-variation-settings: normal) {
