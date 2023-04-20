@@ -10,6 +10,8 @@ const resources = {
       Image: 'Image',
       Settings: 'Settings',
       Welcome: 'Welcome',
+      'Shortcut to open this app': 'Shortcut to open this app',
+      'Change shortcut': 'Change shortcut',
     },
   },
   zh: {
@@ -19,6 +21,8 @@ const resources = {
       Image: '图片',
       Settings: '设置',
       Welcome: '欢迎👏🏻',
+      'Shortcut to open this app': '打开ChatHub的快捷键',
+      'Change shortcut': '修改快捷键',
     },
   },
 }
