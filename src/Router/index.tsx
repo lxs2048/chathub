@@ -4,6 +4,10 @@ import {
 } from "react-router-dom";
 import ErrorPage from "~components/ErrorPage";
 import Layout from "~components/Layout";
+import ChatPage from "~pages/ChatPage";
+import ImagePage from "~pages/ImagePage";
+import SettingPage from "~pages/SettingPage";
+import WelcomePage from "~pages/WelcomePage";
 const router = createHashRouter([
     {
         path: "/",
@@ -12,19 +16,19 @@ const router = createHashRouter([
         children: [
             {
                 path: "",
-                element: <div>welcome</div>,
+                element: <WelcomePage/>,
             },
             {
                 path: "chat",
-                element: <div>chat</div>,
+                element: <ChatPage/>,
             },
             {
                 path: "image",
-                element: <div>image</div>,
+                element: <ImagePage/>,
             },
             {
                 path: "setting",
-                element: <div>setting</div>,
+                element: <SettingPage/>,
             },
         ],
     },

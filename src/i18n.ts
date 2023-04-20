@@ -9,6 +9,7 @@ const resources = {
       Chat: 'Chat',
       Image: 'Image',
       Settings: 'Settings',
+      Welcome: 'Welcome',
     },
   },
   zh: {
@@ -17,6 +18,7 @@ const resources = {
       Chat: '聊天',
       Image: '图片',
       Settings: '设置',
+      Welcome: '欢迎👏🏻',
     },
   },
 }
