@@ -5,8 +5,14 @@ export enum StartupPage {
     Chat = 'chat',
     Image = 'image',
 }
+export enum ChatGPTMode {
+    API = 'api',
+    Webapp = 'webapp',
+}
 const userConfigWithDefaultValue = {
+    openaiApiHost: 'https://api.openai.com',
     startupPage: StartupPage.Home,
+    chatgptMode: ChatGPTMode.API
 }
 export type UserConfig = typeof userConfigWithDefaultValue
 

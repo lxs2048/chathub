@@ -5,7 +5,7 @@ import Button from "~components/Button"
 import PagePanel from "~components/Page"
 import Select from "~components/Select"
 import KDB from "~components/Settings/KDB"
-import { StartupPage, UserConfig, getUserConfig, updateUserConfig } from "~services/user-config"
+import { ChatGPTMode, StartupPage, UserConfig, getUserConfig, updateUserConfig } from "~services/user-config"
 import { getKeys, getVersion, createShortcuts } from '~utils'
 function SettingPage() {
     const { t } = useTranslation()
@@ -59,6 +59,33 @@ function SettingPage() {
                     <div>
                         <Button text={t('Change shortcut')} size="normal" onClick={createShortcuts} />
                     </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <p className="font-bold text-xl">ChatGPT</p>
+                    <div className="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10 mb-1">
+                        {(Object.keys(ChatGPTMode) as (keyof typeof ChatGPTMode)[]).map((k) => (
+                            <div className="flex items-center" key={k}>
+                                <input
+                                    id={k}
+                                    type="radio"
+                                    checked={userConfig.chatgptMode === ChatGPTMode[k]}
+                                    className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                                    value={ChatGPTMode[k]}
+                                    onChange={(e) => updateConfigValue({ chatgptMode: e.currentTarget.value as ChatGPTMode })}
+                                />
+                                <label htmlFor={k} className="ml-3 block text-sm font-medium leading-6">
+                                    {k} {t('Mode')}
+                                </label>
+                            </div>
+                        ))}
+                    </div>
+                    {userConfig.chatgptMode === ChatGPTMode.API ? (
+                        <div>{ChatGPTMode.API} {t('Mode')}</div>
+                    ) : (
+                        <div>
+                            {t('NoHave')}
+                        </div>
+                    )}
                 </div>
                 <Button color={dirty ? 'primary' : 'flat'} text={t('Save')} className="w-fit mt-10 mb-5" onClick={save} />
                 <Toaster position="top-right" />
