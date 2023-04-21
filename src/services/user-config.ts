@@ -3,7 +3,7 @@ import { defaults } from 'lodash-es'
 export enum StartupPage {
     Home = 'home',
     Chat = 'chat',
-    Images = 'images',
+    Image = 'image',
 }
 const userConfigWithDefaultValue = {
     startupPage: StartupPage.Home,
@@ -12,5 +12,7 @@ export type UserConfig = typeof userConfigWithDefaultValue
 
 export async function getUserConfig(): Promise<UserConfig> {
     const result = await Browser.storage.sync.get(Object.keys(userConfigWithDefaultValue))
-    return defaults(result, userConfigWithDefaultValue)
+    const conf = defaults(result, userConfigWithDefaultValue)
+    // console.log(conf);
+    return conf
 }

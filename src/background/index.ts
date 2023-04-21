@@ -12,7 +12,7 @@ async function openAppPage() {
     }
     // 没有打开，指定跳转的hash路由
     const { startupPage } = await getUserConfig()
-    const hash = startupPage === StartupPage.Home ? '' : `#${startupPage}`
+    const hash = startupPage === StartupPage.Home ? '' : `#/${startupPage}`
     await Browser.tabs.create({ url: `app.html${hash}` })
 }
 

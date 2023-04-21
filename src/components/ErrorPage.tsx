@@ -8,12 +8,13 @@ type RouterError = {
 }
 export default function ErrorPage() {
   const error = useRouteError() as RouterError;
+  console.log(error);
   return (
     <div className="h-screen">
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
-        <i>{error.statusText || error.error.message}</i>
+        <i>{error.statusText || ''}</i>
       </p>
     </div>
   );
