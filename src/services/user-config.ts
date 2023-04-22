@@ -1,5 +1,6 @@
 import Browser from 'webextension-polyfill'
 import { defaults } from 'lodash-es'
+import { CHATGPT_API_MODELS, CHATGPT_HOME_URL } from '~consts'
 export enum StartupPage {
     Home = 'home',
     Chat = 'chat',
@@ -10,9 +11,14 @@ export enum ChatGPTMode {
     Webapp = 'webapp',
 }
 const userConfigWithDefaultValue = {
-    openaiApiHost: 'https://api.openai.com',
+    // chatgpt
+    openaiApiKey: '',
+    openaiApiHost: CHATGPT_HOME_URL,
+    chatgptApiModel: CHATGPT_API_MODELS[0],
+    chatgptMode: ChatGPTMode.API,
+    chatgptApiTemperature: 1,
+    // other
     startupPage: StartupPage.Home,
-    chatgptMode: ChatGPTMode.API
 }
 export type UserConfig = typeof userConfigWithDefaultValue
 

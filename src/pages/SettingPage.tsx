@@ -5,6 +5,7 @@ import Button from "~components/Button"
 import PagePanel from "~components/Page"
 import Select from "~components/Select"
 import KDB from "~components/Settings/KDB"
+import ChatGPTAPISettings from '~components/Settings/ChatGPTAPISettings'
 import { ChatGPTMode, StartupPage, UserConfig, getUserConfig, updateUserConfig } from "~services/user-config"
 import { getKeys, getVersion, createShortcuts } from '~utils'
 function SettingPage() {
@@ -80,7 +81,7 @@ function SettingPage() {
                         ))}
                     </div>
                     {userConfig.chatgptMode === ChatGPTMode.API ? (
-                        <div>{ChatGPTMode.API} {t('Mode')}</div>
+                        <ChatGPTAPISettings userConfig={userConfig} updateConfigValue={updateConfigValue} />
                     ) : (
                         <div>
                             {t('NoHave')}
