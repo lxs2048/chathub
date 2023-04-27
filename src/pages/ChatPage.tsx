@@ -1,12 +1,25 @@
-import { useTranslation } from "react-i18next"
-import PagePanel from "~components/Page"
+import ConversationPanel from "~components/Chat/ConversationPanel"
 
 function ChatPage() {
-    const { t } = useTranslation()
+    const chat = {
+        sendMessage: ()=>{},
+        resetConversation: ()=>{
+            console.log('clear');
+        },
+        generating: false,
+        stopGenerating: ()=>{
+            console.log('stop');
+        },
+    }
     return (
-        <PagePanel title={`${t('Chat')}`}>
-            Chat
-        </PagePanel>
+        <div className="overflow-hidden">
+            <ConversationPanel
+                botId="chatgpt"
+                generating={chat.generating}//正在生成
+                stopGenerating={chat.stopGenerating}
+                onUserSendMessage={chat.sendMessage}
+            />
+        </div>
     )
 }
 

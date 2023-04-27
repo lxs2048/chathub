@@ -14,7 +14,9 @@ const resources = {
       'Change shortcut': 'Change shortcut',
       Saved: 'Saved',
       Mode: 'Mode',
-      NoHave: 'No'
+      NoHave: 'No',
+      Send: 'Send',
+      Stop: 'Stop',
     },
   },
   zh: {
@@ -28,7 +30,9 @@ const resources = {
       'Change shortcut': '修改快捷键',
       Saved: '已保存',
       Mode: '模式',
-      NoHave: '暂无'
+      NoHave: '暂无',
+      Send: '发送',
+      Stop: 'Stop',
     },
   },
 }
