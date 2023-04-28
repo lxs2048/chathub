@@ -26,5 +26,17 @@
   "background": {
     "service_worker": "src/background/index.ts",
     "type": "module"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/main.tsx"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "app.html" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
 }
